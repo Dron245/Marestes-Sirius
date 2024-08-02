@@ -1,0 +1,39 @@
+//====================================================================================================
+.AndreyP {
+	.footer {
+
+		&__container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 84%;
+			color: #fafafa;
+			padding-block: 30px;
+			@media (max-width:$mobile) {
+				padding-block: 40px;
+				flex-direction: column;
+				justify-content: initial;
+				align-items: flex-start;
+				row-gap: 20px;
+				font-size: 16px;
+			}
+		}
+
+		&__left {}
+
+		&__right {
+			a {
+				display: block;
+
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+
+}
+
+//====================================================================================================
