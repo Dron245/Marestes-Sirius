@@ -1,12 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="AndreyP" lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Marestes"
-	})
+	@@include('html/_head.htm',{ "title":"Marestes" })
 	<body>
 		<div class="wrapper marestes">
 			@@include('html/_header.htm',{})
 			<main class="page">
+				<section class="page__main main">
+					<div class="main__container">
+						<h1 class="main__title">marestes</h1>
+						<div class="main__img">
+							<img src="@img/Marestes/MacBook Pro 16-inch Space Black Front.png" alt="Image" />
+							<a href="#" class="main__link"
+								><img src="@img/Marestes/main-link.png" alt="Image"
+							/></a>
+						</div>
+					</div>
+				</section>
+				<section class="page__about about">
+					<div class="about__container">
+						<h2 class="about__title title">О проекте</h2>
+						<p class="about__text">Проект "Marestes" представляет собой интернет-магазин, специализирующийся на продаже морепродукции. Заказчик обратился к нам со следующими задачами:</p>
+						<div class="about__img img">
+							<img class="img__1" src="@img/Marestes/about/iMac Pro Front View Mockup.png" alt="iMac">
+							<img class="img__2" src="@img/Marestes/about/iPhone 12 Pro 6.1_ Mockup.png" alt="iPhone">
+						</div>
+						
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

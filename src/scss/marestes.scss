@@ -1,0 +1,95 @@
+//====================================================================================================
+.AndreyP {
+	.page {
+		&__main {
+			
+		}
+	}
+	.main {
+		&__container {
+			max-width: 1520px;
+			// outline: 1px solid blue;
+		}
+
+		&__title {
+			text-align: center;
+			font-weight: 700;
+			line-height: 120%;
+			text-transform: uppercase;
+			color: #eb5757;
+			@include adaptiveValue("font-size", 231, 50, 0, 1520, 320);
+		}
+
+		&__img {
+			margin-top: -5%;
+			position: relative;
+			// outline: 1px solid red;
+			width: 100%;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		&__link {
+			position: absolute;
+			right: 6.712%;
+			bottom: 32%;
+			width: 180px;
+			@include adaptiveValue("right", 100, 0, 0, 1920, 479);
+			@media (max-width: $mobileSmall) {
+				right: 0;
+				bottom: 0;
+			}
+			@media (max-width: $mobile) {
+				width: 88px;
+			}
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	.page {
+		&__about {
+		}
+	}
+	.about {
+		&__container {
+			padding-top: 160px;
+		}
+
+		&__title {
+			color: #eb5757;
+			margin-bottom: 30px;
+		}
+
+		&__text {
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 114%;
+			color: #fafafa;
+			margin-bottom: 50px;
+			@media (max-width:$mobile){
+				 font-size: 16px; 
+			}
+		}
+
+		&__img {
+			outline: 1px solid red;
+			display: flex;
+			.img {
+				&__1 {
+					flex: 0 0 77.209302%; /* 996/1290 */
+				}
+				&__2 {
+					transform: translateX(-10%);
+				}
+			}
+		}
+	}
+	.title {
+	}
+}
+//====================================================================================================
