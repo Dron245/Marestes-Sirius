@@ -15,7 +15,7 @@
 		text-transform: uppercase;
 		@include adaptiveValue("font-size", 80, 30, 0, 1290, 320);
 		@media (max-width: $mobile) {
-			line-height: 1;
+			line-height: 1.2;
 			@include adaptiveValue("margin-bottom", 30, 20, 0, 768, 320);
 		}
 	}

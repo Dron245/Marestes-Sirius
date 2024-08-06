@@ -1,10 +1,183 @@
 .AndreyP {
 	.sirius {
-		.main__title, .title {
+		.main__title,
+		.title {
 			color: #e93c3c;
+		}
+		.tasks {
+			// background: #f2f2f2;
 		}
 		.tasks .title {
 			color: #1a8bff;
 		}
+	}
+
+	//======CREATE==================================================================================================================================================
+
+	.page {
+		&__create {
+		}
+	}
+	.create {
+		&__container {
+			position: relative;
+		}
+
+		&__title {
+			margin-bottom: toRem(40);
+			& + .text {
+				@include adaptiveValue("margin-bottom", 60, 20, 0, 1290, 320);
+				& br {
+					@media (min-width: $mobile) {
+						display: none;
+					}
+				}
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: 20px;
+			}
+		}
+
+		&__text {
+		}
+
+		&__arrow {
+			position: absolute;
+			top: -1.5rem;
+			right: 10rem;
+			@media (max-width: toEm(1290)) and (min-width: $tablet) {
+				// width: 5rem;
+				// top: -1.5rem;
+				right: 0rem;
+			}
+			@media (max-width: $tablet) and (min-width: $mobile) {
+				// width: 4.6875rem;
+				right: -3.5rem;
+				top: -2.5rem;
+			}
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+	}
+
+	//=====DESIGN SYSTEM===================================================================================================================================================
+
+	.sirius {
+		.td-color__row_bottom {
+			@media (max-width: $mobile) {
+				grid-template-columns: 1fr;
+			}
+		}
+		.td-color__row_bottom .td-color__item {
+			@media (min-width: $mobile) {
+				flex: 0 0 100%;
+			}
+		}
+	}
+
+	//===VISUAL=====================================================================================================================================================
+
+	.page {
+		&__visual {
+			position: relative;
+			background: #f2f2f2;
+			color: #191919;
+		}
+	}
+	.visual {
+		&__container {
+			max-width: 1710px;
+			padding-top: 16%;
+			padding-bottom: 22%;
+			@media (max-width: $mobileSmall) {
+				padding-block: 22%;
+			}
+		}
+
+		&__top {
+			position: relative;
+			margin-inline: 195px;
+			@media (max-width: toEm(1687)){
+				  margin-inline: 0;
+				  gap: 10px;
+			}
+			@media (max-width:$tablet){
+				flex-direction: column;
+			}
+			& .text {
+				position: absolute;
+			right: 0;
+			bottom: 9px;
+			max-width: 700px;
+			}
+			@media (max-width: toEm(1687)){
+				  & .text {
+					position: static;
+					max-width: initial;
+				  }
+			}
+		}
+
+		&__title {
+			line-height: 109%;
+			color: #e93c3c;
+		}
+
+		&__text-big {
+			font-weight: 700;
+			line-height: 1.2;
+			@media (min-width:$tablet){
+				@include adaptiveValue("font-size", 60, 30,0,1290,992);
+			}
+			@media (max-width:$tablet){
+				@include adaptiveValue("font-size", 30, 20,0,992,320);
+			}
+		}
+
+		&__content {
+			display: flex;
+			@include adaptiveValue("gap", 30, 20,0,1290,320);
+			@media (max-width:$mobile){
+				 flex-direction: column; 
+			}
+		}
+
+		&__col {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			&_one {
+				align-items: flex-end;
+				@media (max-width:$mobile){
+					 align-items: initial;
+					 order: 1;
+					 & .visual__img {
+						order: 1;
+					 }
+				}
+			}
+
+			&_two {
+			}
+		}
+
+		&__img {
+			border-radius: 28px;
+			overflow: hidden;
+			@media (max-width:$mobileSmall){
+				 border-radius: 6px; 
+			}
+		}
+	}
+	.wave {
+	}
+	.top {
+	}
+	.title {
+	}
+	.text {
+	}
+	.wave-b {
 	}
 }

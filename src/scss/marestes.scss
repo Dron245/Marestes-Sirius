@@ -166,7 +166,6 @@
 		}
 
 		&__title {
-			// color: #eb5757;
 		}
 
 		&__text {
@@ -348,7 +347,6 @@
 		}
 
 		&__title {
-			// color: #eb5757;
 			@media (min-width: $mobile) {
 				margin-bottom: 1.875rem;
 			}
@@ -371,7 +369,6 @@
 		}
 
 		&__td {
-			// outline: 1px solid red;
 			&_title {
 				display: flex;
 				justify-content: space-between;
@@ -403,7 +400,6 @@
 			text-transform: uppercase;
 			font-size: 2.5rem;
 			@media (max-width: $tablet) {
-				// font-size: 20px;
 				@include adaptiveValue("font-size", 40, 30, 0, 992, 320);
 			}
 		}
@@ -415,7 +411,6 @@
 			font-size: 1.875rem;
 			@media (max-width: $tablet) {
 				@include adaptiveValue("font-size", 30, 16, 0, 992, 320);
-				// font-size: 16px;
 			}
 		}
 
@@ -450,6 +445,9 @@
 				grid-template-columns: 1fr 1fr 1fr;
 				gap: 0.625rem;
 			}
+			@media (max-width:$tablet) and (min-width:$mobile){
+				gap: 20px;
+			}
 			&_bottom {
 				// grid-template-columns: 1fr 1fr;
 				@media (min-width: $tablet) {
@@ -464,8 +462,12 @@
 					@media (max-width: $tablet) {
 						padding: 1.5625rem 1.25rem;
 					}
+					
 					@media (min-width: $mobile) {
 						flex: 0 0 47.619048%; /* 300/630 */
+					}
+					@media (max-width:$tablet) and (min-width:$mobile){
+						flex: 1 0 47.619048%;
 					}
 				}
 			}
@@ -478,7 +480,13 @@
 			padding: 1.25rem;
 			@media (min-width: $mobile) {
 				flex: 0 0 30.15873%; /* 190/630 */
-				&:not(:last-child) {
+				
+			}
+			@media (max-width:$tablet) and (min-width:$mobile){
+				flex: 1;
+			}
+			@media (min-width:$tablet){
+				  &:not(:last-child) {
 					margin-right: 4.761905%; /* 30/630 */
 				}
 			}
@@ -487,6 +495,7 @@
 			}
 			@include adaptiveValue("font-size", 20, 16, 0, 1290, 1110);
 
+			
 			@media (max-width: $tablet) {
 				padding: 1.5625rem toRem(10);
 				place-items: center;
