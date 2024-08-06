@@ -1,8 +1,8 @@
 .AndreyP {
 	.header {
 		&__container {
-			padding-top: 80px;
-			padding-bottom: 10px;
+			padding-top: 5rem;
+			padding-bottom: 0.625rem;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -17,9 +17,9 @@
 	.menu {
 
 		&__text {
-			margin-right: 10px;
+			margin-right: 0.625rem;
 			font-weight: 500;
-			font-size: 18px;
+			font-size: 1.125rem;
 			line-height: 120%;
 			color: #fff;
 

@@ -1,10 +1,73 @@
 // Заголовки, общие БЄМ блоки и прочее...
-.title {
-	font-weight: 700;
-	line-height: 76%;
-	text-transform: uppercase;
-	@include adaptiveValue("font-size", 80, 30,0,1290,320);
-	@media (max-width:$mobile){
-		 @include adaptiveValue("margin-bottom", 30, 20,0,768,320); 
+.AndreyP {
+	.cnt {
+		@include adaptiveValue("padding-block", 80, 40, 0, 1290, 320);
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	.title {
+		font-weight: 700;
+		line-height: 76%;
+		text-transform: uppercase;
+		@include adaptiveValue("font-size", 80, 30, 0, 1290, 320);
+		@media (max-width: $mobile) {
+			line-height: 1;
+			@include adaptiveValue("margin-bottom", 30, 20, 0, 768, 320);
+		}
+	}
+	& .marestes .title {
+		color: #eb5757;
+	}
+	.subtitle {
+		font-weight: 700;
+
+		line-height: 114%;
+		margin-bottom: 1.25rem;
+		@include adaptiveValue("font-size", 25, 16, 0, 1290, 320);
+		@media (max-width: $mobile) {
+			margin-bottom: 0.625rem;
+		}
+	}
+
+	.text {
+		font-weight: 500;
+		line-height: 120%;
+		font-size: 20px;
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 20, 16,0,768,320);
+		}
+		// @include adaptiveValue("font-size", 20, 16, 0, 1290, 320);
+	}
+	.block {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 20, 0, 1290, 320);
+		}
+	}
+	.top {
+		display: flex;
+		column-gap: 3.125rem;
+		@include adaptiveValue("margin-bottom", 60, 20, 0, 1290, 320);
+		@media (min-width: $mobile) {
+			align-items: flex-end;
+		}
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			gap: 1.25rem;
+		}
+	}
+
+	.item-list {
+		font-size: 20px;
+		list-style-type: disc;
+		line-height: 1.2;
+		margin-left: 1.5625rem;
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 20, 16,0,768,320); 
+		}
+		&:not(:last-child) {margin-bottom: toRem(20);}
 	}
 }

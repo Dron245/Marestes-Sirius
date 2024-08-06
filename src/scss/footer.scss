@@ -7,28 +7,34 @@
 			align-items: center;
 			justify-content: space-between;
 			font-weight: 500;
-			font-size: 20px;
+			font-size: 1.25rem;
 			line-height: 84%;
 			color: #fafafa;
-			padding-block: 30px;
+			padding-block: 1.875rem;
 			@media (max-width:$mobile) {
-				padding-block: 40px;
+				padding-block: 2.5rem;
 				flex-direction: column;
 				justify-content: initial;
 				align-items: flex-start;
-				row-gap: 20px;
-				font-size: 16px;
+				row-gap: 1.25rem;
+				font-size: 1rem;
 			}
 		}
 
-		&__left {}
+		&__left {
+			p {
+				@media (max-width:$mobile){
+					 line-height: 1; 
+				}
+			}
+		}
 
 		&__right {
 			a {
 				display: block;
 
 				&:not(:last-child) {
-					margin-bottom: 10px;
+					margin-bottom: 0.625rem;
 				}
 			}
 		}
