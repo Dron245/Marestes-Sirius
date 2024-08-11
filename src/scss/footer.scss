@@ -10,9 +10,9 @@
 			font-size: 1.25rem;
 			line-height: 84%;
 			color: #fafafa;
-			padding-block: 1.875rem;
+			padding-bottom: 1.875rem;
 			@media (max-width:$mobile) {
-				padding-block: 2.5rem;
+				padding-bottom: 2.5rem;
 				flex-direction: column;
 				justify-content: initial;
 				align-items: flex-start;
