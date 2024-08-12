@@ -17,6 +17,10 @@
 		border-radius: 0.625rem;
 		caret-color: inherit;
 		font-size: 1rem;
+		@media (max-width:$mobileSmall){
+			 padding: 0.75rem toRem(20);
+			 font-size: 0.875rem;
+		}
 		&._form-focus {
 		}
 		&._form-error {
@@ -33,12 +37,16 @@
 
 	textarea {
 		resize: none;
-		padding: 18px 20px;
-		border: 1px solid #fff;
+		padding: 1.125rem 1.25rem;
+		border: 0.0625rem solid #fff;
 		border-radius: 0.625rem;
 		min-height: 6.75rem;
 		margin-bottom: 1.25rem;
 		font-size: 1rem;
+		@media (max-width:$mobileSmall){
+			 padding: 0.75rem toRem(20);
+			 font-size: 0.875rem;
+		}
 		&::placeholder {
 			transition: opacity 0.3s;
 		}

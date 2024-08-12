@@ -1,7 +1,8 @@
 // Заголовки, общие БЄМ блоки и прочее...
 .AndreyP {
 	.cnt {
-		@include adaptiveValue("padding-block", 80, 40, 0, 1290, 320);
+		@include adaptiveValue("padding-top", 80, 40,0,1290,320);
+		@include adaptiveValue("padding-bottom", 80, 40,0,1290,320);
 	}
 
 	img {
@@ -24,8 +25,6 @@
 	}
 	.subtitle {
 		font-weight: 700;
-
-		line-height: 114%;
 		margin-bottom: 1.25rem;
 		@include adaptiveValue("font-size", 25, 16, 0, 1290, 320);
 		@media (max-width: $mobile) {
@@ -35,12 +34,10 @@
 
 	.text {
 		font-weight: 500;
-		line-height: 120%;
-		font-size: 20px;
+		font-size: 1.25rem;
 		@media (max-width: $mobile) {
 			@include adaptiveValue("font-size", 20, 16, 0, 768, 320);
 		}
-		// @include adaptiveValue("font-size", 20, 16, 0, 1290, 320);
 	}
 	.block {
 		&:not(:last-child) {
@@ -61,9 +58,8 @@
 	}
 
 	.item-list {
-		font-size: 20px;
+		font-size: 1.25rem;
 		list-style-type: disc;
-		line-height: 1.2;
 		margin-left: 1.5625rem;
 		@media (max-width: $mobile) {
 			@include adaptiveValue("font-size", 20, 16, 0, 768, 320);
