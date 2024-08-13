@@ -28,12 +28,12 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 //Список слайдеров
 //Проверяем, есть ли слайдер на странице
-	if (document.querySelector('.swiper')) { //Указываем класс нужного слайдера
+	if (document.querySelector('.marestes__slider')) { //Указываем класс нужного слайдера
 //Создаем слайдер
-		new Swiper('.swiper', { //Указываем класс нужного слайдера
+		new Swiper('.marestes__slider', { //Указываем класс нужного слайдера
             //Подключаем модули слайдера
             //для конкретного случая
-			modules: [Navigation],
+			// modules: [Navigation],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -41,64 +41,101 @@ function initSliders() {
 			//autoHeight: true,
 			speed: 800,
 
-			//touchRatio: 0,
-			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			//lazy: true,
-
-			/*
-			// Эффекты
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-			// Пагинация
-			/*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
-
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
+		
 
 			// Кнопки "влево/вправо"
-			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
-			},
-			/*
+			// navigation: {
+			// 	prevEl: '.swiper-button-prev',
+			// 	nextEl: '.swiper-button-next',
+			// },
+			
 			// Брейкпоинты
 			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
+				300: {
+					slidesPerView: 1.4,
+					spaceBetween: 15,
+					loop: true,
+					// autoHeight: true,
 				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
+				// 640: {
+				// 	slidesPerView: 1.4,
+				// 	spaceBetween: 15,
+				// },
+				468: {
 					slidesPerView: 3,
 					spaceBetween: 20,
+					loop: true,
+				},
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+					loop: true,
+					// autoHeight:true
 				},
 				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+					slidesPerView: 5,
+					spaceBetween: 20,
 				},
 			},
-			*/
+			
+			// События
+			on: {
+
+			}
+		});
+	}
+	if (document.querySelector('.sirius__slider')) { //Указываем класс нужного слайдера
+//Создаем слайдер
+		new Swiper('.sirius__slider', { //Указываем класс нужного слайдера
+            //Подключаем модули слайдера
+            //для конкретного случая
+			// modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			spaceBetween: 5,
+			//autoHeight: true,
+			speed: 800,
+			loop:true,
+
+		
+
+			// Кнопки "влево/вправо"
+			// navigation: {
+			// 	prevEl: '.swiper-button-prev',
+			// 	nextEl: '.swiper-button-next',
+			// },
+			
+			// Брейкпоинты
+			// breakpoints: {
+			// 	300: {
+			// 		slidesPerView: 1.4,
+			// 		spaceBetween: 0,
+			// 		loop: true,
+			// 		// autoHeight: true,
+			// 	},
+			// 	// 640: {
+			// 	// 	slidesPerView: 1.4,
+			// 	// 	spaceBetween: 15,
+			// 	// },
+			// 	468: {
+			// 		slidesPerView: 2.91,
+			// 		spaceBetween: 0,
+			// 		loop: true,
+			// 	},
+			// 	992: {
+			// 		slidesPerView: 5,
+			// 		spaceBetween: 0,
+			// 		loop: true,
+					
+			// 		// autoHeight:true
+			// 	},
+			// 	1268: {
+			// 		slidesPerView: 7,
+			// 		spaceBetween: 0,
+			// 	},
+			// },
+			
 			// События
 			on: {
 

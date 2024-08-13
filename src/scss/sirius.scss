@@ -285,20 +285,25 @@
 			}
 
 			&__galery {
-				gap: 1.125rem;
-				justify-content: space-between;
-				align-items: center;
+				// gap: 1.125rem;
+				// justify-content: space-between;
+				// align-items: center;
 			}
 
 			&__img {
-				box-shadow: 0.25rem 0.25rem 0.625rem 0 rgba(0, 0, 0, 0.15);
-				border-radius: 1.25rem;
+				// overflow: hidden;
+				// padding: 10px;
+				img {
+					// box-shadow: 0.25rem 0.25rem 0.625rem 0 rgba(0, 0, 0, 0.15);
+					// border-radius: 1.25rem;
+
+				}
 				&[class] {
-					flex: 0 0 auto;
+					// flex: 0 0 auto;
 				}
 				&_iphone {
-					box-shadow: initial;
-					border-radius: initial;
+					// box-shadow: initial;
+					// border-radius: initial;
 				}
 			}
 		}
